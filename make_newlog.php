@@ -30,7 +30,7 @@ $tm_temp_end=strtotime(date('Y-m-d',$mytime)." 23:59:59");
 
 $probably=15; // 几率重复该秒
 for($i=$tm_temp_start;$i<$tm_temp_end;) {
-    if (time()%$probably!=$probably-1) {
+    if (rand()%$probably!=$probably-1) {
     } else {
         $i++;
     }
