@@ -28,8 +28,10 @@ $tm_temp_end=strtotime(date('Y-m-d',$mytime)." 23:59:59");
 
 // 活动id|广告位|类型|ip|session|timestamp|device_id|device_type|dt|os|province_code|city_code|platform
 
+$probably=15; // 几率重复该秒
 for($i=$tm_temp_start;$i<$tm_temp_end;) {
-    if (time()%30!=1) { // 1/30的几率重复该秒
+    if (time()%$probably!=$probably-1) {
+    } else {
         $i++;
     }
     // 活动id
