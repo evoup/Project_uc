@@ -28,7 +28,7 @@ $tm_temp_end=strtotime(date('Y-m-d',$mytime)." 23:59:59");
 
 // 活动id|广告位|类型|ip|session|timestamp|device_id|device_type|dt|os|province_code|city_code|platform
 
-$probably=15; // 几率重复该秒
+$probably=55; // 几率重复该秒
 for($i=$tm_temp_start;$i<$tm_temp_end;) {
     if (rand()%$probably!=$probably-1) {
     } else {
